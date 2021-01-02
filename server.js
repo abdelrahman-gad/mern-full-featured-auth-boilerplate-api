@@ -34,15 +34,11 @@ app.use( function(req ,res , next){
 // app middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-// app.use(cors()); // allows all origins
+ app.use(cors()); // allows all origins
 
-app.use(cors({
-    origin: process.env.CLIENT_URL
-}))
-
-
-
-
+// app.use(cors({
+//     origin: process.env.CLIENT_URL
+// }))
 
 
 
